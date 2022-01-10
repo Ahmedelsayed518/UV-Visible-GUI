@@ -30,7 +30,7 @@ class graph(Frame):
         figure1 = plt.Figure(figsize=(7,4))
         ax1 = figure1.add_subplot(111)
         bar1 = FigureCanvasTkAgg(figure1, master)
-        bar1.get_tk_widget().grid(column=0, row=3, rowspan=20, sticky="nesw")
+        bar1.get_tk_widget().grid(column=0, row=1, rowspan=20, sticky="w")
         df1 = df1[['Country','GDP_Per_Capita']].groupby('Country').sum()
         df1.plot(legend=True, ax=ax1)
         ax1.set_title('Country Vs. GDP Per Capita')
